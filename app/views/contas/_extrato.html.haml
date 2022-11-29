@@ -1,0 +1,16 @@
+- if extratos.present?
+  .col.s12
+    %table.responsive-table.centered
+      %thead
+        %tr
+          %th Tipo
+          %th Valor
+          %th Data
+      %tbody
+        - extratos.each do |extrato|
+          %tr{class: "#{deposito_or_extrato(extrato)}"}
+            %td=extrato.class
+            %td="#{sinal(extrato)} #{number_to_currency(extrato.valor)}"
+            %td=extrato.created_at.strftime('%d/%m/%Y')
+- else
+  %p Sem lançamentos!
