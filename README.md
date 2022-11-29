@@ -22,3 +22,22 @@ Regras:
     * De segunda a sexta das 9 às 18 horas a taxa é 5 reais por transferência
     * Fora desse horário a taxa é 7 reais
     * Acima de 1000 reais há um adicional de 10 reais na taxa
+
+## Para inicializar o projeto
+
+Através do terminal navegue até o diretório do projeto e execute: 
+
+```bash
+$ bundle install
+```
+```bash
+$ rails db:create
+```
+```bash
+$ rails db:schema:load
+```
+
+## Para subir o servidor da API...
+```bash
+$ rails s
+```
